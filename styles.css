@@ -410,4 +410,9 @@ body {
         transform: scale(1.2);
         /* Увеличение изображения на мобильных устройствах */
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
 }
