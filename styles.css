@@ -17,7 +17,6 @@ body {
     width: 100%;
     z-index: 10;
     background: rgba(0, 0, 0, 0.5);
-    /* Полупрозрачный фон для шапки */
     padding: 20px 0;
 }
 
@@ -53,11 +52,9 @@ body {
 /* Главный баннер */
 .main-banner {
     background-image: url('images/banner.jpeg');
-    /* Установите ваш баннер */
     background-size: cover;
     background-position: center;
     height: 90vh;
-    /* Высота 3/4 экрана */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,13 +66,6 @@ body {
     text-align: center;
     color: white;
     z-index: 2;
-    font-family: 'Roboto', sans-serif;
-}
-
-.main-banner::before {
-    content: '';
-    /* Убираем затемнение */
-    display: none;
 }
 
 .banner-content h1 {
@@ -121,7 +111,6 @@ body {
 #services {
     padding: 40px 0;
     text-align: center;
-    /* Добавлен фон для раздела */
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -130,7 +119,6 @@ body {
     font-size: 2.2em;
     margin-bottom: 30px;
     color: black;
-    /* Цвет заголовка */
 }
 
 .services-grid {
@@ -138,7 +126,6 @@ body {
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-    /* Позволяет элементам переноситься на новую строку */
 }
 
 .service {
@@ -147,39 +134,31 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     flex: 1 1 calc(50% - 30px);
-    /* Блоки занимают 1/3 ширины */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    /* Добавлены внутренние отступы */
 }
 
 .service-image {
     width: 100%;
     height: 200px;
-    /* Изменено для уменьшения высоты */
     object-fit: cover;
     margin-top: 15px;
     border-radius: 5px;
-    /* Добавлен радиус границ для изображений */
 }
 
 .service h4 {
     font-size: 1.8em;
     margin-bottom: 15px;
     color: black;
-    /* Цвет заголовков услуги */
 }
 
 .service p {
     font-size: 1.2em;
     color: black;
-    /* Цвет текста для описания */
     margin: 0;
-    /* Убран отступ по умолчанию */
     line-height: 1.4;
-    /* Увеличен межстрочный интервал для читаемости */
 }
 
 .projects-section {
@@ -214,7 +193,6 @@ body {
 
 .project-sliders {
     flex: 1;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +216,6 @@ body {
     cursor: pointer;
     font-size: 24px;
 }
-
 
 .project-details {
     flex: 1;
@@ -272,28 +249,19 @@ body {
 
 .contact-info {
     display: flex;
-    /* Устанавливаем контейнер как flex */
     flex-direction: column;
-    /* Выравнивание по вертикали */
     align-items: center;
-    /* Центрирование по горизонтали */
     justify-content: center;
-    /* Центрирование по вертикали (при наличии высоты) */
     margin-top: 20px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     margin: 0 auto;
-    /* Центрирование блока по горизонтали */
     max-width: 800px;
-    /* Максимальная ширина блока */
     min-height: 150px;
-    /* Минимальная высота блока */
     color: black;
-    /* Цвет текста */
     text-align: center;
-    /* Центрирование текста */
 }
 
 .contact-info h4 {
@@ -308,14 +276,11 @@ body {
 
 .contact-info a {
     color: #ff6600;
-    /* Цвет ссылки */
     text-decoration: none;
-    /* Убрать подчеркивание */
 }
 
 .contact-info a:hover {
     text-decoration: underline;
-    /* Подчеркивание при наведении */
 }
 
 /* Стили для реквизитов компании */
@@ -342,10 +307,6 @@ body {
         flex-direction: column;
     }
 
-    .project-image-slider img {
-        border-radius: 10px 10px 0 0;
-    }
-
     .project-details {
         text-align: center;
     }
@@ -353,10 +314,20 @@ body {
     .slider-btn {
         top: 45%;
     }
-    
+
     .contact-info,
     .company-details {
         padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 }
 
@@ -374,6 +345,18 @@ body {
         padding: 12px 24px;
         font-size: 16px;
     }
+
+    .service {
+        flex: 1 1 calc(50% - 10px);
+        /* Два блока в ряд на планшетах */
+    }
+
+    .slider-image {
+        width: 120%;
+        /* Увеличение изображения на планшетах */
+        transform: scale(1.1);
+        /* Увеличение изображения на планшетах */
+    }
 }
 
 @media (max-width: 480px) {
@@ -388,5 +371,43 @@ body {
     .btn-primary {
         padding: 10px 20px;
         font-size: 14px;
+    }
+
+    .service h4 {
+        font-size: 1.5em;
+    }
+
+    .service p {
+        font-size: 1em;
+    }
+
+    .service {
+        flex: 1 1 100%;
+        /* Один блок в ряд на мобильных устройствах */
+    }
+
+    .service h4 {
+        font-size: 1.2em;
+        /* Уменьшен размер шрифта заголовка */
+    }
+
+    .service p {
+        font-size: 0.9em;
+        /* Уменьшен размер шрифта описания */
+    }
+
+    .projects-section h2 {
+        font-size: 28px;
+    }
+
+    .projects-section p {
+        font-size: 16px;
+    }
+
+    .slider-image {
+        width: 150%;
+        /* Увеличение изображения на мобильных устройствах */
+        transform: scale(1.2);
+        /* Увеличение изображения на мобильных устройствах */
     }
 }
