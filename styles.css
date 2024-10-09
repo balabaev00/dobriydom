@@ -1,0 +1,305 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #fdfdfd;
+}
+
+/* Шапка */
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачный фон для шапки */
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ff6600;
+}
+
+/* Главный баннер */
+.main-banner {
+    background-image: url('images/banner.jpeg');
+    /* Установите ваш баннер */
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    /* Высота 3/4 экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-banner::before {
+    content: '';
+    /* Убираем затемнение */
+    display: none;
+}
+
+.banner-content h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+}
+
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+.projects-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    color: black;
+}
+
+.projects-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.projects-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Оформление проекта */
+.project {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.project-sliders {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.project-sliders img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    color: #ffffff !important;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+.project-details {
+    flex: 1;
+    text-align: left;
+}
+
+.project-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.cta-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Стили для контактной информации */
+.contact-info {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 150px;
+    color: black;
+
+    text-align: center;
+}
+
+.contact-info h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Стили для реквизитов компании */
+.company-details {
+    margin-top: 80px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+.company-details h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.company-details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-image-slider img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .project-details {
+        text-align: center;
+    }
+
+    .slider-btn {
+        top: 45%;
+    }
+    
+    .contact-info,
+    .company-details {
+        padding: 10px;
+    }
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 48px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
